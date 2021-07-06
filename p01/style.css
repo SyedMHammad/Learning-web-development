@@ -42,7 +42,60 @@ h2 {
 }
 
 .form-control input {
-    border-color:2px solid lightgray;
+    border-color:1px solid lightgray;
+    border-width: 0.001px;
+    box-shadow: transparent;
     display: block;
-    border-radius: 5px;
+    border-radius: 2px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px; 
+}
+
+.form-control input:focus{
+outline: 0;
+}
+
+.form-control.success input{
+    border-color: limegreen;
+}
+.form-control.failure input{
+    border-color: red;
+}
+.form-control small{
+    position: absolute;
+    color: red;
+    visibility: hidden;
+    bottom: 0px;
+    left: 0px;
+}
+.form-control.failure small{
+    visibility: visible;
+}
+
+.button1{
+    cursor: pointer;
+    background-color: rgb(52, 137, 235);;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding:10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.button2{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 4px;
+    color:black;
+    font-size: 16px;
+    display: block;
+    margin-left: 40px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    width: 80%;
+    padding: 10px;
+    size: 50px;
 }
