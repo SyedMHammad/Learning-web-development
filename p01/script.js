@@ -15,7 +15,7 @@ function showsuccess(input)
     const formcontrol=input.parentElement;
     formcontrol.className='form-control success';
 }
-function validateEmail(email) {
+function isValid(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
@@ -31,7 +31,7 @@ form.addEventListener('submit',function(e){
     if(email.value === ''){
         showfailure(email,'Email cannot be empty');
     }
-    else if(validateEmail(email))
+    else if(!isValid(email.value))
     {
         showfailure(email,'Enter valid email');
     }
