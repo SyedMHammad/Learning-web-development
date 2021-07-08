@@ -65,6 +65,10 @@ function checkpassword(input1,input2)
 {
     if(input1.value===input2.value)
     {
+        if(input1.value==='')
+        {
+            showfailure(input2,"Passwords did not match");
+        }
         showsuccess(input2);    
     }
     else
