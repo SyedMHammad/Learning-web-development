@@ -69,16 +69,13 @@ function checkpassword(input1,input2)
     }
     else
     {
-        console.log(input1.value);
-        console.log(input2.value);
         showfailure(input2,"Passwords did not match");
     }
 }
 form.addEventListener('submit',function(e){
     e.preventDefault();
-    
-    checkEmail(email);
     check([username,email,password,password2]);
+    checkEmail(email);
     checkpassword(password,password2);
     checkLength(username,3,10);
     checkLength(password,6,30);
