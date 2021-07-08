@@ -63,13 +63,15 @@ function checkEmail(input)
 }
 function checkpassword(input1,input2)
 {
-    if(input1.value!=input2.value)
+    if(input1.value===input2.value)
     {
-        showfailure(input,"Passwords did not match");
+        showsuccess(input2);    
     }
     else
     {
-        showsuccess(input2);
+        console.log(input1.value);
+        console.log(input2.value);
+        showfailure(input2,"Passwords did not match");
     }
 }
 form.addEventListener('submit',function(e){
