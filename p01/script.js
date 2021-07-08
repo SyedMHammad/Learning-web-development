@@ -67,7 +67,7 @@ function checkpassword(input1,input2)
     {
         if(input1.value==='')
         {
-            showfailure(input2,`${getFieldId(input2)} should be between ${min} and ${max}`);
+            showfailure(input2,`${getFieldId(input2)} should be between 6 and 30`);
             return;
         }
         showsuccess(input2);    
