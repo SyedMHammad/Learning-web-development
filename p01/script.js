@@ -67,7 +67,8 @@ function checkpassword(input1,input2)
     {
         if(input1.value==='')
         {
-            showfailure(input2,"Passwords did not match");
+            showfailure(input2,`${getFieldId(input2)} should be between ${min} and ${max}`);
+            return;
         }
         showsuccess(input2);    
     }
